@@ -4,15 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Card widget</title>
     <script src="index.js" defer></script>
 </head>
 <body>
-    <form name="form">
-        <input type="text" name="card_number" placeholder="Номер карты" value="">
-        <input type="text" name="card_expire" placeholder="Срок годности" value="">
-        <input type="text" name="card_name" placeholder="имя владельца" value="">
-        <input type="text" name="card_secret" placeholder="Секретный код" value="">
+    <form class="form" name="form">
+        <h1 class="form__title h2">Оплатить</h1>
+        <div class="form__item">
+            <input class="form__input" type="text" name="card_number" placeholder="Номер карты" value="">
+            <label class="form__label" for="card_number">Номер карты</label>
+            <div class="form__feedback form__feedback_type_error">Некорректно написано</div>
+        </div>
+        <div class="form__item">
+            <input class="form__input" type="text" name="card_expire" placeholder="Срок годности" value="">
+            <label class="form__label" for="card_expire">Срок годности</label>
+            <div class="form__feedback"></div>
+        </div>
+        <div class="form__item">
+            <input class="form__input" type="text" name="card_name" placeholder="Имя владельца" value="">
+            <label class="form__label" for="card_name">Имя владельца</label>
+            <div class="form__feedback"></div>
+        </div>
+        <div class="form__item">
+            <input class="form__input" type="text" name="card_secret" placeholder="Секретный код" value="">
+            <label class="form__label" for="card_secret">Секретный код</label>
+            <div class="form__feedback"></div>
+        </div>
+        <div class="form__actions">
+            <div class="form__button">
+                <button class="button" type="submit">Оплатить</button>
+            </div>
+        </div>
     </form>
 </body>
 </html>

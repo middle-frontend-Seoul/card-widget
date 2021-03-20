@@ -1,0 +1,92 @@
+.form {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+    border-radius: 12px;
+    padding: 60px 30px 30px;
+}
+
+.form__title {
+    margin-bottom: 32px;
+    text-align: center;
+    width: 100%;
+}
+
+.form__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 9px;
+    padding-top: 11px;
+}
+
+.form__item:focus-within ::placeholder {
+    opacity: 0;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    font-weight: 500;
+    font-size: 9px;
+    color:  var(--secondaryColor);
+    opacity: 0;
+}
+
+.form__input {
+    margin:0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    padding: 7px 0;
+    color: var(--primaryColor);
+    border-bottom: 1px solid #3369F3;
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+    opacity: 1;
+}
+
+.form__input_invalid {
+    color: var(--alertColor);
+}
+
+.form__feedback {
+    font-size: 8px;
+    margin-top: 7px;
+    height: 8px;
+    visibility: hidden;
+}
+
+.form__feedback_type_error {
+    visibility: visible;
+    color: var(--alertColor);
+}
+
+.form__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form__actions_login {
+    margin-top: 117px;
+}
+
+.form__actions_register {
+    margin-top: 31px;
+}
+
+.form__button {
+    width: 100%;
+    margin-bottom: 14px;
+}
