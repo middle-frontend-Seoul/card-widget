@@ -78,6 +78,26 @@ function checkCardName(name) {
     return ('ok')
 }
 
+function checkCardSecret(number) {
+    if (/\D/.test(number))
+        return('Введите валидный код')
+    if (number.length === 3)
+    {
+        return ('ok')
+    }
+    else
+        return('Введите валидный код')
+}
+
+function checkCardExpire(number) {
+    const array = name.split('/');
+    if (array.length !== 2)
+        return ('Ошибка формата: MM YY')
+    if (/\D/.test(array[0]) || /\D/.test(array[1]))
+        return('Введены неверные символы')
+    return ('ok')
+}
+
 function checkForm() {
     console.log('form_submited');
 }
