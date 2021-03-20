@@ -1,15 +1,22 @@
-//имя формы card_form
+document.addEventListener('DOMContentLoaded', main);
+document.addEventListener('submit', formSubmit);
 
-function onConsole(e) {
-    e.preventDefault();
-    const formData = new FormData(document.querySelector('form'))
-    const object = {
-        cardNumber: formData.get('card_number'),
-        cardExpire: formData.get('card_expire'),
-        cardName: formData.get('card_name'),
-        cardSecret: formData.get('card_secret'),
-    }
-    console.log(object)
+function main() {
+  console.log('DOM has been loaded');
+  
+}
+
+function formSubmit(event) {
+  event.preventDefault();
+
+  const formData = new FormData(document.querySelector('form'))
+  const object = {
+    cardNumber: formData.get('card_number'),
+    cardExpire: formData.get('card_expire'),
+    cardName: formData.get('card_name'),
+    cardSecret: formData.get('card_secret'),
+  }
+  console.log(object)
 }
 
 function validation() {
