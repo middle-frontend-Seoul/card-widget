@@ -14,22 +14,22 @@
             <div class="form__item">
                 <input class="form__input" type="text" name="card_number" placeholder="Номер карты" value="">
                 <label class="form__label" for="card_number">Номер карты</label>
-                <div class="form__feedback form__feedback_type_error">Некорректно написано</div>
+                <div id="card_number_feedback" class="form__feedback form__feedback_type_error"></div>
             </div>
             <div class="form__item">
                 <input class="form__input" type="text" name="card_name" placeholder="Имя владельца" value="">
                 <label class="form__label" for="card_name">Имя владельца</label>
-                <div class="form__feedback"></div>
+                <div id="card_name_feedback" class="form__feedback"></div>
             </div>
             <div class="form__item">
                 <input class="form__input" type="text" name="card_expire" placeholder="Срок годности" value="">
                 <label class="form__label" for="card_expire">Срок годности</label>
-                <div class="form__feedback"></div>
+                <div id="card_expire_feedback" class="form__feedback"></div>
             </div>
             <div class="form__item">
                 <input class="form__input" type="text" name="card_secret" placeholder="Секретный код" value="">
                 <label class="form__label" for="card_secret">Секретный код</label>
-                <div class="form__feedback"></div>
+                <div id="card_secret_feedback" class="form__feedback"></div>
             </div>
             <div class="form__actions">
                 <button class="form__button" type="submit">Оплатить</button>

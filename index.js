@@ -30,12 +30,54 @@ function validation() {
 }
 
 function checkInput(event) {
-    let validationResult = '';
-    if (event.target.name === 'card_number')
-        validationResult = checkCardNumber(event.target.value)
-    if (event.target.name === 'card_name')
-        validationResult = checkCardName(event.target.value)
-    console.log(validationResult)
+    if (event.target.name === 'card_number') {
+      const cardNumberValidation = checkCardNumber(event.target.value)
+      const errorEl = document.getElementById('card_number_feedback');
+      if (cardNumberValidation === 'ok') {
+        errorEl.className = 'form__feedback'
+        errorEl.textContent = ''
+      } else {
+        errorEl.className = 'form__feedback form__feedback_type_error'
+        errorEl.textContent = cardNumberValidation
+      }
+      console.log(cardNumberValidation);
+    }
+    if (event.target.name === 'card_name') {
+      const cardNameValidation = checkCardName(event.target.value)
+      const errorEl = document.getElementById('card_name_feedback');
+      if (cardNameValidation === 'ok') {
+        errorEl.className = 'form__feedback'
+        errorEl.textContent = ''
+      } else {
+        errorEl.className = 'form__feedback form__feedback_type_error'
+        errorEl.textContent = cardNameValidation
+      }
+      console.log(cardNameValidation)
+    }
+    if (event.target.name === 'card_secret') {
+      const cardSecretValidation = checkCardSecret(event.target.value)
+      const errorEl = document.getElementById('card_secret_feedback');
+      if (cardSecretValidation === 'ok') {
+        errorEl.className = 'form__feedback'
+        errorEl.textContent = ''
+      } else {
+        errorEl.className = 'form__feedback form__feedback_type_error'
+        errorEl.textContent = cardSecretValidation
+      }
+      console.log(cardNameValidation)
+    }
+    if (event.target.name === 'card_expire') {
+      const cardExpireValidation = checkCardExpire(event.target.value)
+      const errorEl = document.getElementById('card_expire_feedback');
+      if (cardExpireValidation === 'ok') {
+        errorEl.className = 'form__feedback'
+        errorEl.textContent = ''
+      } else {
+        errorEl.className = 'form__feedback form__feedback_type_error'
+        errorEl.textContent = cardExpireValidation
+      }
+      console.log(cardExpireValidation)
+    }
 }
 
 function checkCardNumber(number) {
