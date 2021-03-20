@@ -33,6 +33,8 @@ function checkInput(event) {
     let validationResult = '';
     if (event.target.name === 'card_number')
         validationResult = checkCardNumber(event.target.value)
+    if (event.target.name === 'card_name')
+        validationResult = checkCardName(event.target.value)
     console.log(validationResult)
 }
 
@@ -70,6 +72,17 @@ function checkCardNumber(number) {
     }
     else
         return('Введите валидный номер карты')
+}
+
+function checkCardName(name) {
+    const array = name.split(' ');
+    const reg = new RegExp("^.*[^A-z].*$");
+    console.log(reg.test(array[0]))
+    if (array.length !== 2)
+        return ('Ошибка формата: ИМЯ ФАМИЛИЯ')
+    if (reg.test(array[0]) || reg.test(array[1]))
+        return('Введены неверные символы')
+    return ('ok')
 }
 
 function checkForm() {
