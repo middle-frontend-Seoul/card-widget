@@ -1,18 +1,41 @@
-.form {
+:root {
+    --primaryColor: #1e1e1e;
+    --secondaryColor: #999999;
+    --accentColor: #3369f3;
+    --alertColor: #ff2f2f;
+    --inverseColor: #ffffff;
+    --bgColor: #ffffff;
+    --bgColorLight: #fbfbfb;
+    --bgColorDark: #efefef;
+    --bgColorAccent: #e4edfd;
+    --bgColorMessageBubble: #f8f8f8;
+    --bgColorMessageTime: rgba(82, 82, 82, 0.5);
+}
+
+button {
+    background-color: transparent;
+    color: inherit;
+    border-width: 0;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+#widget {
     width: 340px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+    border-radius: 12px;
+    padding: 40px 30px 30px;
+}
+
+.form {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
-    border-radius: 12px;
-    padding: 60px 30px 30px;
-}
-
-.form__title {
-    margin-bottom: 32px;
-    text-align: center;
-    width: 100%;
 }
 
 .form__item {
@@ -88,5 +111,22 @@
 
 .form__button {
     width: 100%;
-    margin-bottom: 14px;
+    height: 32px;
+    color: var(--inverseColor);
+    background-color: var(--accentColor);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.form__button:hover {
+    background-color: #0d47de; /* darken 20% */
+}
+
+.form__button:disabled {
+    background-color: #99b3f9; /* lighten 20% */
+    cursor: default;
 }
