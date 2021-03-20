@@ -64,7 +64,7 @@ function checkInput(event) {
         errorEl.className = 'form__feedback form__feedback_type_error'
         errorEl.textContent = cardSecretValidation
       }
-      console.log(cardNameValidation)
+      console.log(cardSecretValidation)
     }
     if (event.target.name === 'card_expire') {
       const cardExpireValidation = checkCardExpire(event.target.value)
